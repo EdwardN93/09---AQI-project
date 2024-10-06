@@ -95,7 +95,7 @@ if(!empty($fileName)){
             if(array_sum($pm25) > 0){
 
                 $datasets[] = [
-                    'pm25' => "AQI, PM 2.5 in {$units['pm25']}",
+                    'label' => "AQI, PM 2.5 in {$units['pm25']}",
                     'data' => $pm25,
                     'fill' => false,
                     'borderColor' => 'rgb(75, 192, 192)',
@@ -105,7 +105,7 @@ if(!empty($fileName)){
             if(array_sum($pm10) > 0){
 
                 $datasets[] = [
-                    'pm10' => "AQI, PM 10 in {$units['pm10']}",
+                    'label' => "AQI, PM 10 in {$units['pm10']}",
                     'data' => $pm10,
                     'fill' => false,
                     'borderColor' => 'rgb(255, 75, 192)',
@@ -124,6 +124,7 @@ if(!empty($fileName)){
                         datasets: <?php echo json_encode($datasets); ?>
                     }
                 });
+                console.log(chart.data);
             });
         </script>
 
