@@ -124,7 +124,6 @@ if(!empty($fileName)){
                         datasets: <?php echo json_encode($datasets); ?>
                     }
                 });
-                console.log(chart.data);
             });
         </script>
 
